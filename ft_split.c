@@ -45,7 +45,7 @@ static void	storagewords(char **str, char **auxi, char c, int getword)
 			*str = *str + 1;
 		}
 		aux = ft_strchr(*str, c);
-		*auxi = ft_substr(*str, 0,(char)aux - (char)str);
+		*auxi = ft_substr(*str, 0,(char)aux - (char)*str);
 		printf("%d\n", j);
 	}
 }
