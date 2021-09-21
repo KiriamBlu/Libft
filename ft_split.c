@@ -37,7 +37,7 @@ static void	storagewords(char **str, char **auxi, char c, int getword)
 	char	*aux;
 
 	j = 0;
-	if (getword != 0 && *str)
+	if (getword != 0 && **str)
 	{
 		while (**str == c)
 		{
