@@ -1,6 +1,6 @@
 ### Hi there, I'm JOAN - aka [KIRIAM]👋
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/codeSTACKr?color=1DA1F2&logo=twitter&style=for-the-badge)](https://twitter.com/_Kiriam)
+[![Twitter Follow](https://img.shields.io/twitter/follow/KiriamBlu?color=1DA1F2&logo=twitter&style=for-the-badge)](https://twitter.com/_Kiriam)
 
 ## I'm a Student in 42 Madrid!!
 
