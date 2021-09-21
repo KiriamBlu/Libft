@@ -1,14 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jsanfeli <jsanfeli@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/20 11:49:45 by jsanfeli          #+#    #+#             */
-/*   Updated: 2021/09/20 18:04:30 by jsanfeli         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -30,14 +19,50 @@ static int getnumword(char const *s, char limit)
 	return(i);
 }
 
-/*char **ft_split(char const *s, char c)
+static void	storagewords(char **str, char **auxi, char c, int getword)
 {
+	int		j;
+	char	*aux;
 
-}*/
-/*
-int main(int argc, char const *argv[])
+	j = 0;
+	if (getword != 0 && **str)
+	{
+		while (**str == c)
+		{
+			j++;
+			*str = *str + 1;
+		}
+		aux = ft_strchr(*str, c);
+		*auxi = ft_substr(*str, 0,aux - *str);
+		j = 0;
+		while(j < aux - *str)
+			*str = *str + 1;
+	}
+}
+
+char **ft_split(char const *s, char c)
 {
-	char j[30] = "hola.me.llamo.joan..";
-	printf("%d\n", getnumword(j,'.'));
-	return 0;
-}*/
+	char	**aux;
+	char	*str;
+	int		n_words;
+	int	i;
+
+	i = 0;
+	aux = NULL;
+	if (s)
+	{
+		str = (char *)s;
+		n_words = getnumword(str, c);
+		aux = ft_calloc(n_words + 1, sizeof(char *));
+		aux[n_words] = NULL;
+		if (!aux)
+			return (0);
+		while (i < n_words)
+		{
+			storagewords(&str, &(aux[i]), c, n_words);
+
+			i++;
+		}
+	}
+	return(aux);
+}
