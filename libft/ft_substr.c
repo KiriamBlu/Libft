@@ -35,9 +35,3 @@ char *ft_substr(char const *s, unsigned int start,size_t len)
 	}
 	return(str);
 }
-
-int main()
-{
-	printf("%s\n", ft_substr("tripouille", 0, 42000));
-	return 0;
-}
