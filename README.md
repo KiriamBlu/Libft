@@ -1,4 +1,4 @@
-### Hi there, I'm Joan Sanfelipec - [KIRIAM]👋
+### Hi there, I'm Joan Sanfelipe - [KIRIAM]👋
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/_Kiriam?color=1DA1F2&logo=twitter&style=for-the-badge)](https://twitter.com/_Kiriam)
 
