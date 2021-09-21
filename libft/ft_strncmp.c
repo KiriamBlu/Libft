@@ -25,12 +25,3 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 	}
 	return (0);
 }
-
-/*int main()
-{
-	printf("%d\n", ft_strncmp("Tripouille", "TripouilleX", 42));
-	printf("%d\n", ft_strncmp("Tripouille", "Tripouill", 42));
-	printf("%d\n", strncmp("Tripouille", "TripouilleX", 42));
-	printf("%d\n", strncmp("Tripouille", "Tripouill", 42));
-	return 0;
-}*/
