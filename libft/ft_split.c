@@ -6,28 +6,26 @@
 /*   By: jsanfeli <jsanfeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 13:06:15 by jsanfeli          #+#    #+#             */
-/*   Updated: 2021/09/20 16:54:38 by jsanfeli         ###   ########.fr       */
+/*   Updated: 2021/09/22 13:58:23 by jsanfeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int getnumword(char const *s, char limit)
+static int	getnumword(char const *s, char limit)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-	if(*s != limit && *s)
+	if (*s != limit && *s)
 		i++;
-	while(*(s + 1))
+	while (*(s + 1))
 	{
 		if (*s == limit && *(s + 1) != limit && *(s + 1) != '\0')
-		{
 			i++;
-		}
-	s++;
+		s++;
 	}
-	return(i);
+	return (i);
 }
 
 static void	storagewords(char **str, char **auxi, char c, int getword)
@@ -44,19 +42,19 @@ static void	storagewords(char **str, char **auxi, char c, int getword)
 			*str = *str + 1;
 		}
 		aux = ft_strchr(*str, c);
-		*auxi = ft_substr(*str, 0,aux - *str);
+		*auxi = ft_substr(*str, 0, aux - *str);
 		j = 0;
-		while(j < aux - *str)
+		while (j < aux - *str)
 			*str = *str + 1;
 	}
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**aux;
 	char	*str;
 	int		n_words;
-	int	i;
+	int		i;
 
 	i = 0;
 	aux = NULL;
@@ -71,11 +69,10 @@ char **ft_split(char const *s, char c)
 		while (i < n_words)
 		{
 			storagewords(&str, &(aux[i]), c, n_words);
-
 			i++;
 		}
 	}
-	return(aux);
+	return (aux);
 }
 
 /*int main(int argc, char const *argv[])

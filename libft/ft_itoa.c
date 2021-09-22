@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa   .c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsanfeli <jsanfeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 14:15:16 by jsanfeli          #+#    #+#             */
-/*   Updated: 2021/09/14 13:11:39 by jsanfeli         ###   ########.fr       */
+/*   Updated: 2021/09/22 13:12:10 by jsanfeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int lenint(int n)
+static int	len(int n)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	if (n < 0)
@@ -22,27 +22,27 @@ static int lenint(int n)
 		n = n * -1;
 		i++;
 	}
-	while(n > 9)
+	while (n > 9)
 	{
 		n = n / 10;
 		i++;
 	}
-	return(i);
+	return (i);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *str;
-	int i;
+	char	*str;
+	int		i;
 
-	i = lenint(n);
+	i = len(n);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	str = ft_calloc(i + 1, sizeof(char));
 	if (!str)
-		return(NULL);
+		return (NULL);
 	str[i--] = '\0';
-	if(n < 0)
+	if (n < 0)
 	{
 		str[0] = '-';
 		n = n * -1;
@@ -54,5 +54,5 @@ char *ft_itoa(int n)
 		i--;
 	}
 	str[i] = n + '0';
-	return(str);
+	return (str);
 }

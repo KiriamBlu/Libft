@@ -6,24 +6,24 @@
 /*   By: jsanfeli <jsanfeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 11:00:57 by jsanfeli          #+#    #+#             */
-/*   Updated: 2021/09/20 18:13:22 by jsanfeli         ###   ########.fr       */
+/*   Updated: 2021/09/22 13:48:00 by jsanfeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start,size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *str;
-	size_t i;
+	char	*str;
+	size_t	i;
 
 	i = 0;
 	if (!s)
-		return(NULL);
+		return (NULL);
 	if (ft_strlen(s) < start)
 	{
 		str = ft_calloc(1, sizeof(char));
-		return(str);
+		return (str);
 	}
 	if (len > ft_strlen(s) - start - 1)
 		len = ft_strlen(s) - start;
@@ -33,5 +33,5 @@ char *ft_substr(char const *s, unsigned int start,size_t len)
 		str[i] = s[i + start];
 		i++;
 	}
-	return(str);
+	return (str);
 }

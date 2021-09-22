@@ -6,7 +6,7 @@
 /*   By: jsanfeli <jsanfeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 12:45:19 by jsanfeli          #+#    #+#             */
-/*   Updated: 2021/09/20 17:39:19 by jsanfeli         ###   ########.fr       */
+/*   Updated: 2021/09/22 13:50:07 by jsanfeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,21 @@ static size_t	ft_backstrchr(const char *s, int c)
 	return (0);
 }
 
-
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *str;
-	size_t i;
-	size_t j;
+	char	*str;
+	size_t	i;
+	size_t	j;
 
 	str = (char *) s1;
 	i = strlen(str) - 1;
 	j = 0;
-	while (ft_strchr(set,(int) str[j]))
+	while (ft_strchr(set, (int)str[j]))
 		j++;
-	while((ft_backstrchr(set,(int) str[i])))
+	while (ft_backstrchr(set, (int)str[i]))
 		i--;
-	str = ft_substr(str, j ,i - j + 1);
+	str = ft_substr(str, j, i - j + 1);
 	if (!str)
-		return(NULL);
-	return(str);
+		return (NULL);
+	return (str);
 }
