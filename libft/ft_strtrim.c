@@ -6,7 +6,7 @@
 /*   By: jsanfeli <jsanfeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 12:45:19 by jsanfeli          #+#    #+#             */
-/*   Updated: 2021/09/22 13:50:07 by jsanfeli         ###   ########.fr       */
+/*   Updated: 2021/09/23 18:59:42 by jsanfeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	j;
 
 	str = (char *) s1;
-	i = strlen(str) - 1;
+	i = ft_strlen(str) - 1;
 	j = 0;
 	while (ft_strchr(set, (int)str[j]))
 		j++;
