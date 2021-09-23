@@ -6,7 +6,7 @@
 /*   By: jsanfeli <jsanfeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 12:07:38 by jsanfeli          #+#    #+#             */
-/*   Updated: 2021/09/22 14:09:48 by jsanfeli         ###   ########.fr       */
+/*   Updated: 2021/09/23 09:44:50 by jsanfeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@
 # include<unistd.h>
 # include<stdlib.h>
 # include<string.h>
+
+//Structure lists
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
 
 //first part
 int		ft_isalnum(int c);

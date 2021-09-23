@@ -6,7 +6,7 @@
 /*   By: jsanfeli <jsanfeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 14:07:40 by jsanfeli          #+#    #+#             */
-/*   Updated: 2021/09/22 15:01:17 by jsanfeli         ###   ########.fr       */
+/*   Updated: 2021/09/23 09:20:22 by jsanfeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int 	nb;
+	unsigned int	nb;
 	char			l;
 
 	if (n == -2147483648)
@@ -32,7 +32,6 @@ void	ft_putnbr_fd(int n, int fd)
 			ft_putnbr_fd (nb / 10, fd);
 			l = '0' + (nb % 10);
 			ft_putchar_fd(l, fd);
-
 		}
 		else
 		{	

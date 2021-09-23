@@ -6,7 +6,7 @@
 /*   By: jsanfeli <jsanfeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 14:03:40 by jsanfeli          #+#    #+#             */
-/*   Updated: 2021/09/22 14:21:29 by jsanfeli         ###   ########.fr       */
+/*   Updated: 2021/09/23 09:20:51 by jsanfeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
-		return;
+		return ;
 	while (*s)
 		ft_putchar_fd(*s++, fd);
 }
