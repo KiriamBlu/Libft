@@ -6,7 +6,7 @@
 /*   By: jsanfeli <jsanfeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 13:06:15 by jsanfeli          #+#    #+#             */
-/*   Updated: 2021/09/23 19:18:49 by jsanfeli         ###   ########.fr       */
+/*   Updated: 2021/09/24 13:46:16 by jsanfeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,6 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	aux = NULL;
-	if(s == '\0' || c == '\0')
-		return(NULL);
 	if (s)
 	{
 		str = (char *)s;
@@ -75,20 +73,4 @@ char	**ft_split(char const *s, char c)
 		}
 	}
 	return (aux);
-}
-
-int main(int argc, char const *argv[])
-{
-	char **j;
-	int i;
-
-	i = 0;
-
-	j = ft_split("",'f');
-	while(i < 6)
-	{
-		printf("Palabra[%d] = %s\n",i, j[i]);
-		i++;
-	}
-	return 0;
 }

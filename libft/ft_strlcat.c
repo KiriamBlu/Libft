@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsanfeli <jsanfeli@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ifluxa-c <ifluxa-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/15 10:14:06 by jsanfeli          #+#    #+#             */
-/*   Updated: 2021/09/22 13:54:52 by jsanfeli         ###   ########.fr       */
+/*   Created: 2021/09/14 13:01:53 by ifluxa-c          #+#    #+#             */
+/*   Updated: 2021/09/24 12:43:29 by ifluxa-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,17 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	b;
 	size_t	len;
 
-	a = 0;
-	while (*(dst + a) != '\0')
-		a++;
-	if (a >= size)
-		return (size + ft_strlen(src));
-	len = a;
+	a = ft_strlen(dst);
+	len = ft_strlen(src);
+	if (a > size)
+		a = size;
 	b = 0;
-	while (src[b] && a < size - 1)
+	while (src[b] && a + b + 1 < size)
 	{
-		dst[a] = src[b];
+		dst[a + b] = src[b];
 		b++;
-		a++;
 	}
-	dst[a] = '\0';
-	return (ft_strlen(src) + len);
+	if (b != 0)
+		dst[a + b] = '\0';
+	return (len + a);
 }
