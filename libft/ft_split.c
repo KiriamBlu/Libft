@@ -76,7 +76,6 @@ char	**ft_split(char const *s, char c)
 		str = (char *)s;
 		n_words = getnumword(str, c);
 		aux = ft_calloc(n_words + 1, sizeof(char *));
-		aux[n_words] = NULL;
 		if (!aux)
 			return (0);
 		while (i < n_words)
