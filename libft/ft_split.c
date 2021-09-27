@@ -6,7 +6,7 @@
 /*   By: jsanfeli <jsanfeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 13:06:15 by jsanfeli          #+#    #+#             */
-/*   Updated: 2021/09/27 14:00:46 by jsanfeli         ###   ########.fr       */
+/*   Updated: 2021/09/27 14:10:28 by jsanfeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	aux = NULL;
-	if (!s || ft_strlen(s) == 0 || c == '\0')
+	if (!s || ft_strlen(s) == 0)
 		return (emptymat());
 	if (s)
 	{
