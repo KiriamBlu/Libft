@@ -6,7 +6,7 @@
 /*   By: jsanfeli <jsanfeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 13:25:51 by jsanfeli          #+#    #+#             */
-/*   Updated: 2021/09/22 13:50:30 by jsanfeli         ###   ########.fr       */
+/*   Updated: 2021/09/27 11:09:55 by jsanfeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strrchr(const char *str, int c)
 {
 	int	i;
 
-	i = strlen(str);
+	i = ft_strlen(str);
 	while (str[i] != '\0')
 		i++;
 	while (i > 0 && str[i] != (unsigned char)c)

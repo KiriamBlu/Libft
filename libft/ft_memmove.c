@@ -6,7 +6,7 @@
 /*   By: jsanfeli <jsanfeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 13:39:15 by jsanfeli          #+#    #+#             */
-/*   Updated: 2021/09/22 13:44:40 by jsanfeli         ###   ########.fr       */
+/*   Updated: 2021/09/27 12:30:25 by jsanfeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char		*lastd;
 	const char	*s;
 
+	if (!dst && !src)
+		return (NULL);
 	d = dst;
 	s = src;
 	if (d < s)

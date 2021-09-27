@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                         :+:      :+:    :+:  */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsanfeli <jsanfeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 12:33:56 by jsanfeli          #+#    #+#             */
-/*   Updated: 2021/09/22 13:42:18 by jsanfeli         ###   ########.fr       */
+/*   Updated: 2021/09/27 11:12:57 by jsanfeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*aux;
 	t_list	*start;		
-	
+
 	if (!f)
 		return (NULL);
 	start = NULL;
@@ -31,5 +31,5 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		ft_lstadd_back(&start, aux);
 		lst = lst->next;
 	}	
-	return(start);
+	return (start);
 }
