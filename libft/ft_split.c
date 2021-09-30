@@ -6,7 +6,7 @@
 /*   By: jsanfeli <jsanfeli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 13:06:15 by jsanfeli          #+#    #+#             */
-/*   Updated: 2021/09/29 10:08:34 by jsanfeli         ###   ########.fr       */
+/*   Updated: 2021/09/30 08:23:23 by jsanfeli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,9 @@ static void	freezer(char **aux, int lap)
 	int	i;
 
 	i = lap;
-	while (i > 0)
-	{
-		free (aux--);
-		i--;
-	}
-	i = lap;
-	while (i > 0)
-	{
-		free (*aux);
-		*aux = *aux - 1;
-		i--;
-	}
+	while (i-- > 0)
+		free (aux[i]);
+	free(aux);
 	return ;
 }
 
@@ -101,7 +92,7 @@ char	**ft_split(char const *s, char c)
 		storagewords(&str, &(aux[i]), c, n_words);
 		if (!aux[i])
 		{
-			freezer (&(*aux), i);
+			freezer (aux, i);
 			return (NULL);
 		}
 	}
